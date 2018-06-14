@@ -1,14 +1,17 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { auth } from '../firebase/index';
+import * as routes from '../constants/routes';
+import { Link, withRouter } from 'react-router-dom';
 
-const SignOutPage = () =>
-  <div>
-    <Card body>
-      <CardBody>
-        <CardTitle><b><u>Sign Out</u></b></CardTitle>
-        <br />
-      </CardBody>
-    </Card>
-  </div>
+handleSignOut = () => {
+  auth.doSignOut();
 
-export default SignOutPage;
+}
+
+const SignOutButton = () =>
+  <Button onClick={() => this.handleSignOut}>
+    Sign Out
+  </Button>
+
+export default SignOutButton;

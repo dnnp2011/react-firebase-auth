@@ -4,3 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+const.borderThickness	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^const signInCardStyle = {$/;"	property	line:5
+const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  borderThickness:'10px',$/;"	property	line:6
+const.width	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  margin: '3px auto',$/;"	property	line:7
+const.maxWidth	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  width: '50%',$/;"	property	line:8

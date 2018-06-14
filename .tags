@@ -21,5 +21,26 @@ render	/home/drowsy/Projects/React/react-firebase-auth/src/components/Navigation
 @keyframes App-logo-spin	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^@keyframes App-logo-spin {$/;"	function	line:29
 from	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^  from { transform: rotate(0deg); }$/;"	function	line:30
 to	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^  to { transform: rotate(360deg); }$/;"	function	line:31
-body	/home/drowsy/Projects/React/react-firebase-auth/src/index.css	/^body {$/;"	function	line:1
 render	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.js	/^  render() {$/;"	function	line:16
+short_name	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "short_name": "Authenticate App",$/;"	function	line:2
+name	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "name": "Practice with Firebase authentication",$/;"	function	line:3
+icons	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "icons": [$/;"	function	line:4
+src	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^      "src": "favicon.ico",$/;"	function	line:6
+sizes	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^      "sizes": "64x64 32x32 24x24 16x16",$/;"	function	line:7
+type	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^      "type": "image\/x-icon"$/;"	function	line:8
+start_url	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "start_url": ".\/index.html",$/;"	function	line:11
+display	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "display": "standalone",$/;"	function	line:12
+theme_color	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "theme_color": "#000000",$/;"	function	line:13
+background_color	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "background_color": "#ffffff"$/;"	function	line:14
+const.alignText	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^const labelStyle = {$/;"	property	line:6
+const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^  alignText: 'center',$/;"	property	line:7
+const.borderRadius	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^const picStyle = {$/;"	property	line:11
+const.width	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^  borderRadius: '3px',$/;"	property	line:12
+const.height	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^  width: '100%',$/;"	property	line:13
+const.marign	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^  height: '300px',$/;"	property	line:14
+body	/home/drowsy/Projects/React/react-firebase-auth/src/index.css	/^body {$/;"	function	line:3
+body	/home/drowsy/Projects/React/react-firebase-auth/src/index.scss	/^body {$/;"	function	line:3
+const.borderThickness	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^const signInCardStyle = {$/;"	property	line:5
+const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  borderThickness:'10px',$/;"	property	line:6
+const.width	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  margin: '3px auto',$/;"	property	line:7
+const.maxWidth	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  width: '50%',$/;"	property	line:8

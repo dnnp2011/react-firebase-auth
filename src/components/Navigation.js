@@ -1,17 +1,45 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Collapse, Button } from 'reactstrap';
 import * as routes from '../constants/routes';
 
-const Navigation = () =>
-<div>
-  <ul>
-    <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
-    <li><Link to={routes.LANDING}>Landing</Link></li>
-    <li><Link to={routes.HOME}>Home</Link></li>
-    <li><Link to={routes.ACCOUNT}>Account</Link></li>
-  </ul>
-</div>
+export default class Navigation extends Component {
+  state = {
+    isOpen: false,
+  }
 
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  }
 
-export default Navigation;
+  render() {
+    return (
+      <div>
+        <Navbar color='dark' dark expand='md'>
+          <NavbarBrand href={routes.HOME}>
+            Authenticate
+          </NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className='ml-auto' navbar>
+              <NavItem>
+                <NavLink href={routes.SIGN_IN}>Sign In</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href={routes.LANDING}>Landing Page</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href={routes.HOME}>Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href={routes.ACCOUNT}>Account</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}

@@ -1,8 +1,14 @@
 import React from 'react';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 const PasswordChangePage = () =>
   <div>
-    <h1>Change Password Page</h1>
+    <Card body>
+      <CardBody>
+        <CardTitle><b><u>Change Password</u></b></CardTitle>
+        <br />
+      </CardBody>
+    </Card>
   </div>
 
 export default PasswordChangePage;

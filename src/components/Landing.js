@@ -16,7 +16,7 @@ const picStyle = {
 }
 
 const LandingPage = () =>
-  <div>
+  <div style={{margin: 'auto', width: '60%'}}>
     <Card body>
       <CardBody>
         <CardTitle><b><u>Landing Page</u></b></CardTitle>

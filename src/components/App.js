@@ -10,13 +10,13 @@ import HomePage from './Home';
 import AccountPage from './Account';
 
 import * as routes from '../constants/routes';
-import './App.css';
+import styles from './App.scss';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="main">
           <Navigation />
           <hr />
           <Route exact path={routes.LANDING} component={() => <LandingPage />} />

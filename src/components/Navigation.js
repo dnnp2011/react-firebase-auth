@@ -4,6 +4,7 @@ import { Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Collapse, Bu
 import * as routes from '../constants/routes';
 import SignOutButton from './SignOut';
 import { auth } from '../firebase';
+import AuthUserContext from './AuthUserContext';
 
 export default class Navigation extends Component {
   state = {
@@ -17,6 +18,7 @@ export default class Navigation extends Component {
   }
 
   render() {
+    const { authUser } = this.props;
     return (
       <div>
         <Navbar color='dark' dark expand='md'>
@@ -25,26 +27,47 @@ export default class Navigation extends Component {
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className='ml-auto' navbar>
-              <NavItem>
-                <NavLink href={routes.SIGN_IN}>Sign In</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href={routes.LANDING}>Landing Page</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href={routes.HOME}>Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href={routes.ACCOUNT}>Account</NavLink>
-              </NavItem>
-              <NavItem>
-                {auth.getUser() && <SignOutButton />}
-              </NavItem>
-            </Nav>
+            <AuthUserContext.Consumer>
+              { authUser => authUser
+                ? <NavigationAuth />
+                : <NavigationNonAuth />
+              }
+            </AuthUserContext.Consumer>
           </Collapse>
         </Navbar>
       </div>
     );
   }
+}
+
+const NavigationAuth = () => {
+  return (
+    <Nav className='ml-auto' navbar>
+      <NavItem>
+        <NavLink href={routes.LANDING}>Landing Page</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink href={routes.HOME}>Home</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink href={routes.ACCOUNT}>Account</NavLink>
+      </NavItem>
+      <NavItem>
+        <SignOutButton />
+      </NavItem>
+    </Nav>
+  );
+}
+
+const NavigationNonAuth = () => {
+  return (
+    <Nav className='ml-auto' navbar>
+      <NavItem>
+        <NavLink href={routes.LANDING}>Landing Page</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink href={routes.SIGN_IN}>Sign In</NavLink>
+      </NavItem>
+    </Nav>
+  );
 }

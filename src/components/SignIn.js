@@ -7,6 +7,7 @@ import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 import { SignUpLink } from './SignUp';
 import { withRouter } from 'react-router-dom';
+import { PasswordForgetLink } from './PasswordForget';
 
 const signInCardStyle = {
   margin: '3px auto',
@@ -96,6 +97,7 @@ class SignInForm extends Component {
             <br />
             { error && <p style={{textAlign: 'center'}}>{error.message}</p> }
             <SignUpLink />
+            <PasswordForgetLink />
           </Form>
         </CardBody>
       </Card>

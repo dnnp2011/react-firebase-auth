@@ -3,6 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } fr
 import { auth } from '../firebase/index';
 import * as routes from '../constants/routes';
 import { withRouter } from 'react-router-dom';
+import { NavLink } from 'reactstrap';
 
 class SignOutButton extends Component {
   render() {
@@ -10,13 +11,14 @@ class SignOutButton extends Component {
     const user = auth.getUser();
 
     return (
-
-      <Button color='dark' onClick={() => {
+      <NavLink
+        onClick={(event) => {
           auth.doSignOut();
           history.push(routes.SIGN_IN);
-        }}>
+        }}
+        href=''>
         Sign Out
-      </Button>
+      </NavLink>
     );
   };
 }

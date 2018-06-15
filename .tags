@@ -7,7 +7,6 @@
 from	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^  from { transform: rotate(0deg); }$/;"	function	line:30
 to	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^  to { transform: rotate(360deg); }$/;"	function	line:31
 body	/home/drowsy/Projects/React/react-firebase-auth/src/index.css	/^body {$/;"	function	line:3
-render	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.js	/^  render() {$/;"	function	line:16
 short_name	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "short_name": "Authenticate App",$/;"	function	line:2
 name	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "name": "Practice with Firebase authentication",$/;"	function	line:3
 icons	/home/drowsy/Projects/React/react-firebase-auth/public/manifest.json	/^  "icons": [$/;"	function	line:4
@@ -49,13 +48,14 @@ const.projectId	/home/drowsy/Projects/React/react-firebase-auth/src/firebase/fir
 const.storageBucket	/home/drowsy/Projects/React/react-firebase-auth/src/firebase/firebase.js	/^    projectId: "react-firebase-auth-3ec18",$/;"	property	line:9
 const.messagingSenderId	/home/drowsy/Projects/React/react-firebase-auth/src/firebase/firebase.js	/^    storageBucket: "react-firebase-auth-3ec18.appspot.com",$/;"	property	line:10
 render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignUp.js	/^  render() {$/;"	function	line:36
-export.isOpen	/home/drowsy/Projects/React/react-firebase-auth/src/components/Navigation.js	/^  state = {$/;"	property	line:9
-render	/home/drowsy/Projects/React/react-firebase-auth/src/components/Navigation.js	/^  render() {$/;"	function	line:19
-const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^const signInCardStyle = {$/;"	property	line:11
-const.backgroundColor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  margin: '3px auto',$/;"	property	line:12
-email	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  const INIT_STATE = {$/;"	property	line:22
-password	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    email: '',$/;"	property	line:23
-error	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    password: '',$/;"	property	line:24
-constructor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  constructor(props) {$/;"	function	line:33
-render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  render() {$/;"	function	line:62
-render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignOut.js	/^  render() {$/;"	function	line:8
+render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignOut.js	/^  render() {$/;"	function	line:9
+const.email	/home/drowsy/Projects/React/react-firebase-auth/src/components/PasswordForget.js	/^  const INIT_STATE = {$/;"	property	line:22
+const.error	/home/drowsy/Projects/React/react-firebase-auth/src/components/PasswordForget.js	/^    email: '',$/;"	property	line:23
+render	/home/drowsy/Projects/React/react-firebase-auth/src/components/PasswordForget.js	/^  render() {$/;"	function	line:47
+const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^const signInCardStyle = {$/;"	property	line:12
+const.backgroundColor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  margin: '3px auto',$/;"	property	line:13
+email	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  const INIT_STATE = {$/;"	property	line:23
+password	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    email: '',$/;"	property	line:24
+error	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    password: '',$/;"	property	line:25
+constructor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  constructor(props) {$/;"	function	line:34
+render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  render() {$/;"	function	line:63

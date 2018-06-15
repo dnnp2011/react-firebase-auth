@@ -4,4 +4,10 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignOut.js	/^  render() {$/;"	function	line:8
+const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^const signInCardStyle = {$/;"	property	line:12
+const.backgroundColor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  margin: '3px auto',$/;"	property	line:13
+email	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  const INIT_STATE = {$/;"	property	line:23
+password	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    email: '',$/;"	property	line:24
+error	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    password: '',$/;"	property	line:25
+constructor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  constructor(props) {$/;"	function	line:34
+render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  render() {$/;"	function	line:63

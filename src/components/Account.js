@@ -2,8 +2,9 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle,
   Button, CardDeck, CardGroup, Row, Col } from 'reactstrap';
 import PasswordForgetPage from './PasswordForget';
-import AuthUserContext from './AuthUserContext';
 import PasswordChangeForm from './PasswordChange';
+import AuthUserContext from './AuthUserContext';
+import withAuthorization from './withAuthorization';
 
 const AccountPage = () =>
   <AuthUserContext.Consumer>
@@ -29,4 +30,6 @@ const AccountPage = () =>
     }
   </AuthUserContext.Consumer>
 
-export default AccountPage;
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(AccountPage);

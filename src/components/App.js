@@ -10,6 +10,7 @@ import PasswordForgetPage from './PasswordForget';
 import HomePage from './Home';
 import AccountPage from './Account';
 import PasswordChangePage from './PasswordChange';
+import AdminPage from './AdminPage';
 import withAuthentication from './withAuthentication';
 
 import * as routes from '../constants/routes';
@@ -28,6 +29,7 @@ const App = () => {
         <Route exact path={routes.HOME} component={() => <HomePage />} />
         <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
         <Route exact path={routes.PASSWORD_CHANGE} component={() => <PasswordChangePage />} />
+        <Route exact path={routes.ADMIN} component={() => <AdminPage />} />
       </div>
     </Router>
   );

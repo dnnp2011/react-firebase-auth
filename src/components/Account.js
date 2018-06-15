@@ -1,22 +1,32 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle,
+  Button, CardDeck, CardGroup, Row, Col } from 'reactstrap';
+import PasswordForgetPage from './PasswordForget';
+import AuthUserContext from './AuthUserContext';
+import PasswordChangeForm from './PasswordChange';
 
 const AccountPage = () =>
-  <div>
-    <Card body>
-      <CardBody>
-        <CardTitle><b><u>Account Page</u></b></CardTitle>
-        <CardSubtitle>My Profile Info</CardSubtitle>
-        <br />
-        <CardText>
-          <h7><b>About Me:</b></h7>
-          <p>
-            My name is Dalton Pierce, I'm a programmer from Austin, Texas. I now live in New York City and work at OrchardBlockchain Accelerator!
-          </p>
-          <Button color='warning' href='/pw-change'>Update Password</Button>
-        </CardText>
-      </CardBody>
-    </Card>
-  </div>
+  <AuthUserContext.Consumer>
+    {authUser =>
+      <div>
+        <Card body className='mw-100 d-float mx-auto'>
+          <CardBody>
+            <CardTitle><b>Account Info</b></CardTitle>
+            <CardSubtitle>Welcome: {authUser ? authUser.email : ''}</CardSubtitle>
+            <br />
+            <CardText>
+              <Col sm={12}>
+                <CardDeck row
+                  style={{display: 'flex', margin: '10px auto', alignItems: 'center', justifyContent: 'center'}}>
+                  <PasswordForgetPage />
+                  <PasswordChangeForm />
+                </CardDeck>
+              </Col>
+            </CardText>
+          </CardBody>
+        </Card>
+      </div>
+    }
+  </AuthUserContext.Consumer>
 
 export default AccountPage;

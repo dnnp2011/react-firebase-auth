@@ -3,9 +3,9 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, For
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
 
-const PasswordForgetPage = () =>
+const PasswordForgetPage = (props) =>
   <div>
-    <Card body inverse color='dark' style={{width: '450px'}} className='mx-auto d-block'>
+    <Card body inverse color='dark' style={{width: '450px', height: '350px'}} className='mx-auto d-block'>
       <CardBody>
         <CardTitle style={{textAlign: 'center', margin: '3px auto'}}><b>Forgot Password</b></CardTitle>
         <br />

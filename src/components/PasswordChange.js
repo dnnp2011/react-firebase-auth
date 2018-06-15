@@ -4,7 +4,7 @@ import { auth } from '../firebase';
 
 const PasswordChangePage = () =>
   <div>
-    <Card body inverse color='dark' className='d-block mx-auto' style={{width: '450px'}}>
+    <Card body inverse color='dark' className='d-block mx-auto' style={{width: '450px', height: '350px'}}>
       <CardTitle style={{textAlign: 'center'}}><b>Change Password</b></CardTitle>
       <CardBody>
         <PasswordChangeForm />

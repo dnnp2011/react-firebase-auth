@@ -35,7 +35,8 @@ class PasswordForgetForm extends Component {
 
     auth.doPasswordReset(email)
     .then(() => {
-      this.setState(byPropKey(...INIT_STATE));
+      this.setState(() => ({ ...INIT_STATE }));
+      this.setState(byPropKey('error', 'Password recovery email successfully sent'));
     })
     .catch(error => {
       this.setState(byPropKey('error', error));
@@ -46,23 +47,23 @@ class PasswordForgetForm extends Component {
 
   render() {
     const { email, error } = this.state;
-    const isInvalid = email === '';
+    const isInvalid = email === '' || !email.includes('@');
 
     return (
       <Form onSubmit={this.onSubmit}>
         <FormGroup className='d-block'>
           <Label lg={12} for='email'>Account Email</Label>
           <Col lg={12}>
-            <Input type='email' id='email' name='email' value={this.state.email} onChange={event => this.setState(byPropKey('email', event.target.value))} placeholder='Email Address' />
+            <Input valid={!isInvalid} type='email' id='email' name='email' value={this.state.email} onChange={event => this.setState(byPropKey('email', event.target.value))} placeholder='Email Address' />
           </Col>
         </FormGroup>
         <br />
         <FormGroup>
           <Col>
-            <Button block type='submit' color='light'>Send Reset Email</Button>
+            <Button disabled={isInvalid} block type='submit' color='light'>Send Reset Email</Button>
           </Col>
         </FormGroup>
-        { error && <p style={{textAlign: 'center'}}>{error.message}</p> }
+        { error && <p style={{textAlign: 'center'}}>{error.message ? error.message : error}</p> }
       </Form>
     );
   }

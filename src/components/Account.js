@@ -13,7 +13,7 @@ const AccountPage = () =>
           <p>
             My name is Dalton Pierce, I'm a programmer from Austin, Texas. I now live in New York City and work at OrchardBlockchain Accelerator!
           </p>
-          <Button color='warning'>Edit</Button>
+          <Button color='warning' href='/pw-change'>Update Password</Button>
         </CardText>
       </CardBody>
     </Card>

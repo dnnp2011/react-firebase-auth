@@ -31,13 +31,9 @@ const SignInPage = ({ history }) =>
   });
 
 class SignInForm extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      ...INIT_STATE
-    }
-  }
+  state = {
+    ...INIT_STATE
+  };
 
 
   onSubmit = (event) => {

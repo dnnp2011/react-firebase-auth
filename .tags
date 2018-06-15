@@ -1,5 +1,3 @@
-export.isOpen	/home/drowsy/Projects/React/react-firebase-auth/src/components/Navigation.js	/^  state = {$/;"	property	line:7
-render	/home/drowsy/Projects/React/react-firebase-auth/src/components/Navigation.js	/^  render() {$/;"	function	line:17
 .card	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^.card {$/;"	function	line:1
 .App-logo	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^.App-logo {$/;"	function	line:9
 .App-header	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.css	/^.App-header {$/;"	function	line:14
@@ -38,11 +36,6 @@ div	/home/drowsy/Projects/React/react-firebase-auth/public/index.html	/^    <div
 main	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.scss	/^main {$/;"	function	line:12
 body	/home/drowsy/Projects/React/react-firebase-auth/src/components/App.scss	/^body {$/;"	function	line:16
 body	/home/drowsy/Projects/React/react-firebase-auth/src/index.scss	/^body {$/;"	function	line:3
-const.borderThickness	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^const signInCardStyle = {$/;"	property	line:5
-const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  borderThickness:'10px',$/;"	property	line:6
-const.width	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  margin: '3px auto',$/;"	property	line:7
-const.maxWidth	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  width: '50%',$/;"	property	line:8
-const.backgroundColor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  maxWidth: '315px',$/;"	property	line:9
 const.alignText	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^const labelStyle = {$/;"	property	line:6
 const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^  alignText: 'center',$/;"	property	line:7
 const.borderRadius	/home/drowsy/Projects/React/react-firebase-auth/src/components/Landing.js	/^const picStyle = {$/;"	property	line:11
@@ -56,3 +49,13 @@ const.projectId	/home/drowsy/Projects/React/react-firebase-auth/src/firebase/fir
 const.storageBucket	/home/drowsy/Projects/React/react-firebase-auth/src/firebase/firebase.js	/^    projectId: "react-firebase-auth-3ec18",$/;"	property	line:9
 const.messagingSenderId	/home/drowsy/Projects/React/react-firebase-auth/src/firebase/firebase.js	/^    storageBucket: "react-firebase-auth-3ec18.appspot.com",$/;"	property	line:10
 render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignUp.js	/^  render() {$/;"	function	line:36
+export.isOpen	/home/drowsy/Projects/React/react-firebase-auth/src/components/Navigation.js	/^  state = {$/;"	property	line:9
+render	/home/drowsy/Projects/React/react-firebase-auth/src/components/Navigation.js	/^  render() {$/;"	function	line:19
+const.margin	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^const signInCardStyle = {$/;"	property	line:11
+const.backgroundColor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  margin: '3px auto',$/;"	property	line:12
+email	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  const INIT_STATE = {$/;"	property	line:22
+password	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    email: '',$/;"	property	line:23
+error	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^    password: '',$/;"	property	line:24
+constructor	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  constructor(props) {$/;"	function	line:33
+render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignIn.js	/^  render() {$/;"	function	line:62
+render	/home/drowsy/Projects/React/react-firebase-auth/src/components/SignOut.js	/^  render() {$/;"	function	line:8

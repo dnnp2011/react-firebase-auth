@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Collapse, Button } from 'reactstrap';
 import * as routes from '../constants/routes';
 import SignOutButton from './SignOut';
+import { auth } from '../firebase';
 
 export default class Navigation extends Component {
   state = {
@@ -38,7 +39,7 @@ export default class Navigation extends Component {
                 <NavLink href={routes.ACCOUNT}>Account</NavLink>
               </NavItem>
               <NavItem>
-                <SignOutButton />
+                {auth.getUser() && <SignOutButton />}
               </NavItem>
             </Nav>
           </Collapse>

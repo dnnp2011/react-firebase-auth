@@ -3,9 +3,10 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button,
   Input, InputGroup, InputGroupButton, CardHeader, Form, FormText, FormGroup,
   Label } from 'reactstrap';
 import * as theme from '../constants/theme';
-import { auth } from '../firebase/index';
+import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 import { SignUpLink } from './SignUp';
+import { withRouter } from 'react-router-dom';
 
 const signInCardStyle = {
   margin: '3px auto',
@@ -24,27 +25,32 @@ const SignInPage = ({ history }) =>
     error: null,
   };
 
-  const byPropKey = (propName, value) => () => ({
-    [propName]: value,
+  const byPropKey = (propertyName, value) => () => ({
+    [propertyName]: value,
   });
 
 class SignInForm extends Component {
-  state = {
-    ...INIT_STATE
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      ...INIT_STATE
+    }
   }
 
+
   onSubmit = (event) => {
-    const { email, password } = this.props;
+    const { email, password } = this.state;
     const { history } = this.props;
 
     auth.doSignInWithEmailAndPassword(email, password)
-    .then(() => {
-      this.setState(() => ({ ...INIT_STATE }));
-      history.push(routes.HOME);
-    })
-    .catch(error => {
-      this.setState(byPropKey('error', error));
-    });
+        .then(authUser => {
+          this.setState(() => ({...INIT_STATE}));
+          history.push(routes.HOME);
+        })
+        .catch(error => {
+          this.setState(byPropKey('error', error));
+        });
 
     event.preventDefault();
   }
@@ -62,7 +68,7 @@ class SignInForm extends Component {
     return (
       <Card body style={{backgroundColor: theme.accentLight, height: '50%', marginTop: '15%'}}>
         <CardBody>
-          <Form onSubmit={this.onSubmit}>
+          <Form onSubmit={(event) => this.onSubmit(event)}>
             <FormGroup>
               <Label for='clientEmail' style={{color: theme.primaryColor}}>Email</Label>
               <Input
@@ -97,4 +103,4 @@ class SignInForm extends Component {
   }
 }
 
-export default SignInPage;
+export default withRouter(SignInPage);

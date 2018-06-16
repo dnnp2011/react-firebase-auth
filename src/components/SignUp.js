@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Form, FormGroup, Label, Input, InputGroup, Col, Row, Alert, FormFeedback } from 'reactstrap';
-import { auth } from '../firebase/index';
+import { auth, db } from '../firebase/index';
 
 import * as theme from '../constants/theme';
 import * as routes from '../constants/routes';
@@ -43,8 +43,13 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passOne)
     .then(authUser => {
-      this.setState(() => ({...INIT_STATE}));
-      history.push(routes.HOME);
+      db.doCreateUser(authUser.user.uid, username, email, 'client')
+      .then(() => {
+        this.setState(() => ({...INIT_STATE, error: 'Successfully created new user'}));
+        history.push(routes.HOME);})
+      .catch(error => {7
+        this.setState(byPropKey('error', error))
+      });
     })
     .catch(error => {
       this.setState(byPropKey('error', error));
@@ -130,7 +135,7 @@ class SignUpForm extends Component {
           </Col>
         </FormGroup>
         <div style={{textAlign: 'center'}}>
-          { error && <p style={{textAlign: 'center'}}>{error.message}</p> }
+          { error && <p style={{textAlign: 'center'}}>{error.message ?  error.message : error}</p> }
         </div>
       </Form>
     );
